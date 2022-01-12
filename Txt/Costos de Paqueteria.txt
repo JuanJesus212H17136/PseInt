@@ -1,0 +1,39 @@
+Algoritmo PAQUETERIA
+	// Declaramos las variables
+	Definir zona,peso Como Entero
+	Definir costo Como Real
+	Escribir '************** BIENVENIDO A LA PAQUTERIA INTERNACIONAL **************'
+	Escribir 'Tenemos diferentes zonas de entrega, con un costo diferente por zona'
+	Escribir 'Los precios dependen tanto del peso (gramos) del paquete como de la zona a donde se envía'
+	Escribir 'Las zonas y precios donde hacemos entregas son las siguientes:'
+	Escribir '1. América del norte a $11.00'
+	Escribir '2. América Central a $10.00'
+	Escribir '3. América del sur $12.00'
+	Escribir '4. Europa a $24.00'
+	Escribir '5. Asia a $27.00'
+	// Pedimos el peso del paquete y la zona donde se entregará
+	Escribir 'Escriba el numero de la zona a la que hará su envío'
+	Leer zona
+	Escribir 'Escriba el peso del paquete (gramos)'
+	Leer peso
+	// Realizamos todas las operaciones de acuerdo a los datos
+	Si peso>5000 Entonces
+		Escribir 'Disculpe, el peso de su paquete excede el peso que manejamos actualmente'
+	SiNo
+		Segun zona  Hacer
+		    1:
+				costo <- 11.00*peso
+			2:
+				costo <- 10.00*peso
+			3:
+				costo <- 12.00*peso
+			4:
+				costo <- 24.00*peso
+			5:
+				costo <- 27.00*peso
+			De Otro Modo:
+				Escribir 'Esta no es una opcion valida'
+		FinSegun
+		Escribir 'El costo de su envío es de $',costo
+	FinSi
+FinAlgoritmo

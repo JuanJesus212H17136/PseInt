@@ -1,0 +1,39 @@
+Algoritmo Tiki_Taka
+	//Un empleado de la tienda "Tiki Taka" realiza N ventas durante el dia,
+	//se requiere saber cuantas de ellas fueron mayores a $1000, cuantas
+	//fueron mayores a $500 pero menores o iguales a $1000, y cuantas 
+	//fueron menores o iguales a $500. Además se requiere saber el monto
+	//de lo vendido en cada categoría y de forma global.
+	
+	//Defiimos las variables a utilizar
+	definir nv, cv, mv, VA, VB, VC, VT como real
+	definir A, B, C Como Entero
+	//Se lee el total de ventas nv
+	Escribir "Escriba el total de ventas del día"
+	leer nv
+//Se inicia el proceso
+	mientras cv<nv hacer
+		escribir "Escriba el monto de la venta"
+		leer mv
+		si mv>1000
+			entonces 
+			A=A+1
+			VA=VA+mv
+		SiNo
+			si mv>500
+				Entonces
+				B=B+1
+				VB=VB+mv
+			SiNo
+				C=C+1
+				VC=VC+mv
+			FinSi
+		FinSi
+		VT=VT+mv
+		cv=cv+1
+	FinMientras
+	escribir "El total de ventas mayores a $1000 es de  " A " con un total de $" VA
+	escribir "El total de ventas mayores a $500 y menores a $1000 es de " B " con un total de $" VB
+	escribir "El total de ventas menores o iguales a $500 es de " C " con un total de $" VC
+	escribir "El total de ventas es $" VT	
+FinAlgoritmo

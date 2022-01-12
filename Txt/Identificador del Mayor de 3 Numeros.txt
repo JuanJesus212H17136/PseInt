@@ -1,0 +1,32 @@
+Algoritmo que_identifica_el_mayor_de_3_numeros
+	// Algoitmo que identifica que numero de los proporcionados es mayor
+	// Asignamos las variables
+	Definir num1,num2,num3,M Como Real
+	// Solicitamos los numeros
+	Escribir 'Por favor escriba los numeros que quiera comparar'
+	Escribir 'Escriba el primer numero'
+	Leer num1
+	Escribir 'Escriba el segundo numero'
+	Leer num2
+	Escribir 'Escriba el tercer numero'
+	Leer num3
+	// Asignamos las condiciones para identificar cual es mayor
+	Si num1=num2 Y num2=num3 Entonces
+		Escribir 'Los numeros que proporciono son todos iguales'
+	SiNo
+		Si num1>num2 Entonces
+			Si num1>num3 Entonces
+				M <- num1
+			SiNo
+				M <- num3
+			FinSi
+		SiNo
+			Si num2>num3 Entonces
+				M <- num2
+			SiNo
+				M <- num3
+			FinSi
+		FinSi
+		Escribir "El numero mayor es " M
+	FinSi
+FinAlgoritmo

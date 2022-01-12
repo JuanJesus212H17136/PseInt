@@ -1,0 +1,36 @@
+Algoritmo Suma_de_Matrices
+	//Ejercicio 5.5
+	//Realice un algoritmo para obtener una matriz
+	//como el resultado de la suma de dos matrices del orden
+	//M x N. 
+	Definir numrengl, numcolum, i, j  Como enteros
+	definir arregloa, arreglob, sumam Como Real
+	i=0; j=0
+    Escribir "Ingrese el numero de renglones " Sin Saltar
+	escribir "---" sin saltar
+	leer numrengl
+	Escribir "Ingrese el numero de columnas " sin saltar
+	escribir "---" sin saltar
+	leer numcolum
+	dimension arregloa[numrengl,numcolum]
+	dimension arreglob[numrengl,numcolum]
+	dimension sumamab[numrengl,numcolum]
+	Para i<-1 Hasta numrengl Con Paso 1 Hacer
+		Para j<-1 Hasta numcolum Con Paso 1 Hacer
+			Escribir "Ingresa la el valor en la posición [" i "," j "] del arreglo a " Sin Saltar
+			escribir "---" sin saltar
+			leer arregloa[i,j]
+			Escribir "Ingresa la el valor en la posición [" i "," j "] del arreglo b " Sin Saltar
+			escribir "---" sin saltar
+			leer arreglob[i,j]
+		Fin Para
+	Fin Para
+	Escribir "La suma de los dos arreglos es:"
+	Para i<-1 Hasta numrengl Con Paso 1 Hacer
+		Para j<-1 Hasta numcolum Con Paso 1 Hacer
+			sumamab[i,j]=arregloa[i,j]+arreglob[i,j]
+			escribir " " sumamab[i,j] " " Sin Saltar
+		Fin Para
+		escribir " "
+	Fin Para
+FinAlgoritmo
