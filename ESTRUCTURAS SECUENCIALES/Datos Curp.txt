@@ -1,0 +1,23 @@
+Algoritmo Calculadora
+	//Algoritmo que lea 2 numeros y relice las siguientes operaciones: Suma, Resta, Multiplicación y División
+	
+	//Definir las variables
+	Definir a, b, resultado Como Entero;
+	
+	//Solicitamos los numeros
+	Escribir "El algoritmo que  Suma, Resta Multiplica y Divide 2 números";
+	Escribir " Ingresa el primer numero ";
+	Leer a;
+	Escribir " Ingresa el segundo numero ";
+	Leer b;
+	
+	//Realizamos las operaciones
+	resultado = a+b;
+	Escribir " El resultado de la suma de los dos numeros es: " resultado;
+	resultado = a-b;
+	Escribir " El resultado de la resta de los dos numeros es: " resultado;
+	resultado = a*b;
+	Escribir " El resultado de la multiplicación de los dos numeros es: " resultado;
+	resultado = a/b;
+	Escribir " El resultado de la división de los dos numeros es: " resultado;
+FinAlgoritmo
