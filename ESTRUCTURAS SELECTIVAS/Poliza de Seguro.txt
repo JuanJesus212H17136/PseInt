@@ -1,0 +1,235 @@
+Algoritmo Compañia_de_seguros
+	Escribir '*********Bienvenido a la compañia de seguros para autos*********'
+	Escribir 'Actualmente contamos con dos tipos de poliza, Cobertura amplia (1) y Daño a terceros (2)'
+	Escribir 'Cobertura amplia (1)'
+	Escribir 'Cuya cuota base es de $1,200.'
+	Escribir 'Daño a terceros (2)'
+	Escribir 'Cuya cuota base es de $950.'
+	Escribir ''
+	Escribir 'Tenemos cargos extra sobre la cuota base si la persona que conduce:'
+	Escribir 'Tiene por hábito beber alcohol 10%'
+	Escribir 'Si utiliza lentes 5%'
+	Escribir 'Si padece alguna enfermedad (como deficiencia cardiaca o diabetes) 5%'
+	Escribir 'Si tiene mas de 40 años 20%, en caso de que no, se cargara solo 10%'
+	Escribir ''
+	Definir tpoliza,respuesta Como Entero
+	Definir preciofin Como Real
+	Escribir 'Por favor indique que tipo de poliza quiere 1 para Cobertura amplia y 2 para Daño a Terceros'
+	Leer tpoliza
+	Si tpoliza=1 Entonces
+		Escribir '¿Tiene el habito de beber alcohol?'
+		Escribir 'Digite 1 para si y 2 para no'
+		Leer respuesta
+		Si respuesta=1 Entonces
+			Escribir '¿Utiliza lentes?'
+			Escribir 'Digite 1 para si y 2 para no'
+			Leer respuesta
+			Si respuesta=1 Entonces
+				Escribir '¿padece alguna enfermedad?'
+				Escribir 'Digite 1 para si y 2 para no'
+				Leer respuesta
+				Si respuesta=1 Entonces
+					Escribir '¿Tiene mas de 40?'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin= 1200+1200*.10+1200*.05+1200*.05+1200*.20
+					SiNo
+						preciofin= 1200+1200*.10+1200*.05+1200*.05+1200*.10
+					FinSi
+				SiNo
+					Escribir '¿Tiene mas de 40?'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin= 1200+1200*.10+1200*.05+1200*.20 
+					SiNo
+						preciofin= 1200+1200*.10+1200*.05+1200*.10
+					FinSi
+				FinSi
+			SiNo
+				Escribir '¿Padece alguna enfermedad?'
+				Escribir 'Digite 1 para si y 2 para no'
+				Leer respuesta
+				Si respuesta=1 Entonces
+					Escribir '¿Tiene mas de 40?'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin= 1200+1200*.10+1200*.05+1200*.20 
+					SiNo
+						preciofin= 1200+1200*.10+1200*.05+1200*.10
+					FinSi
+				SiNo
+					Escribir '¿Tiene mas de 40?'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin= 1200+1200*.10+1200*.20
+					SiNo
+						preciofin= 1200+1200*.10+1200*.10
+					FinSi
+				FinSi
+			FinSi
+		SiNo
+			Escribir '¿Utiliza lentes?'
+			Escribir 'Digite 1 para si y 2 para no'
+			Leer respuesta
+			Si respuesta=1 Entonces
+				Escribir '¿Padece alguna enfermedad?'
+				Escribir 'Digite 1 para si y 2 para no'
+				Leer respuesta
+				Si respuesta=1 Entonces
+					Escribir '¿Tiene mas de 40?'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin= 1200+1200*.05+1200*.05+1200*.20
+					SiNo
+						preciofin= 1200+1200*.05+1200*.05+1200*.10
+					FinSi
+				SiNo
+					Escribir '¿Tiene mas de 40?'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin= 1200+1200*.05+1200*.20
+					SiNo
+						Escribir 'suma de 5+10'
+					FinSi
+				FinSi
+			SiNo
+				Escribir '¿Padece alguna enfermedad?'
+				Escribir 'Digite 1 para si y 2 para no'
+				Leer respuesta
+				Si respuesta=1 Entonces
+					Escribir '¿Tiene mas de 40?'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin= 1200+1200*.05+1200*.20
+					SiNo
+						preciofin= 1200+1200*.05+1200*.10
+					FinSi
+				SiNo
+					Escribir '¿Tiene mas de 40?'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin= 1200+1200*.20
+					SiNo
+						preciofin= 1200+1200*.10
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	SiNo
+		Escribir '¿Tiene el habito de beber alcohol?'
+		Escribir 'Digite 1 para si y 2 para no'
+		Leer respuesta
+		Si respuesta=1 Entonces
+			Escribir '¿Utiliza lentes?'
+			Escribir 'Digite 1 para si y 2 para no'
+			Leer respuesta
+			Si respuesta=1 Entonces
+				Escribir '¿Padece alguna enfermedad?'
+				Escribir 'Digite 1 para si y 2 para no'
+				Leer respuesta
+				Si respuesta=1 Entonces
+					Escribir 'tiene mas de 40'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin=950+950*.10+950*.05+950*.05+950*.20
+					SiNo
+						preciofin=950+950*.10+950*.05+950*.05+950*.10
+					FinSi
+				SiNo
+					Escribir 'tiene mas de 40'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin=950+950*.10+950*.05+950*.20
+					SiNo
+						preciofin=950+950*.10+950*.05+950*.10
+					FinSi
+				FinSi
+			SiNo
+				Escribir 'padece alguna enfermedad'
+				Escribir 'Digite 1 para si y 2 para no'
+				Leer respuesta
+				Si respuesta=1 Entonces
+					Escribir 'tiene mas de 40'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin=950+950*.10+950*.05+950*.20
+					SiNo
+						preciofin=950+950*.10+950*.05+950*.10
+					FinSi
+				SiNo
+					Escribir 'tiene mas de 40'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin=950+950*.10+950*.20
+					SiNo
+						preciofin=950+950*.10+950*.10
+					FinSi
+				FinSi
+			FinSi
+		SiNo
+			Escribir 'utiliza lentes'
+			Escribir 'digite 1 para si y 2 para no'
+			Leer respuesta
+			Si respuesta=1 Entonces
+				Escribir 'padece alguna enfermedad'
+				Escribir 'Digite 1 para si y 2 para no'
+				Leer respuesta
+				Si respuesta=1 Entonces
+					Escribir 'tiene mas de 40'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin=950+950*.05+950*.05+950*.20
+					SiNo
+						preciofin=950+950*.05+950*.05+950*.10
+					FinSi
+				SiNo
+					Escribir 'tiene mas de 40'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin=950+950*.05+950*.20
+					SiNo
+						preciofin=950+950*.05+950*.10
+					FinSi
+				FinSi
+			SiNo
+				Escribir 'padece alguna enfermedad'
+				Escribir 'Digite 1 para si y 2 para no'
+				Leer respuesta
+				Si respuesta=1 Entonces
+					Escribir 'tiene mas de 40'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin=950+950*.05+950*.20
+					SiNo
+						preciofin=950+950*.05+950*.10
+					FinSi
+				SiNo
+					Escribir 'tiene mas de 40'
+					Escribir 'Digite 1 para si y 2 para no'
+					Leer respuesta
+					Si respuesta=1 Entonces
+						preciofin=950+950*.20
+					SiNo
+						preciofin=950+950*.20
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+	escribir "El precio de su poliza de seguro es de $" preciofin
+FinAlgoritmo

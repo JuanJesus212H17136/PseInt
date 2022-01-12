@@ -1,0 +1,18 @@
+Algoritmo Factorial
+	//Algoritmo que determiona el factorial de un numero
+	definir num, factoriall Como Real
+	factoriall<-1 
+	escribir sinsaltar "Digite un numero"
+	escribir sinsaltar "----"
+	leer num
+	//Iniciamos un bucle si el numero digitado por el usuario es negativo
+	Mientras num<0 Hacer
+		Escribir sinsaltar "Ingresa un número positivo"
+		escribir sinsaltar "----"
+		leer num
+	Fin Mientras
+	Para i<-1 Hasta num Con Paso 1 Hacer
+		factoriall<- factoriall * i
+	Fin Para
+	escribir "El factorial del número " num " es igual a " factoriall
+FinAlgoritmo

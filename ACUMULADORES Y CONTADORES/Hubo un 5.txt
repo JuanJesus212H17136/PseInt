@@ -1,0 +1,28 @@
+Algoritmo Hay_un_5
+	//Algoritmo que determina si hubo un 5
+	//En una cantidad finita de numeros dados
+	//por el usuario
+	definir N, I, Num Como Entero
+	Definir Ban como caracter
+	N<-0
+	I<-0
+	Num=0
+	Ban="F"
+	Escribir sinsaltar "Digite la cantidad de numeros que quiera comprobar"
+	escribir sinsaltar "---"
+	leer N
+	Repetir
+		I=I+1
+		Escribir sinsaltar "Digite un numero"
+		escribir sinsaltar "---"
+		leer Num
+		si Num=5 entonces 
+		 Ban="V"
+		FinSi
+	Hasta Que I=N
+	si Ban="V" Entonces
+		escribir "Se presionó un 5"
+	SiNo
+		escribir "No se presionó un 5"
+	FinSi
+FinAlgoritmo

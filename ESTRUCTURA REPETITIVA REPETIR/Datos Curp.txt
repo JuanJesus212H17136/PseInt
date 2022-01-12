@@ -1,0 +1,148 @@
+Algoritmo Datos_CURP_Final
+	//Dada la curp, verficaremos si el usuario es masculino o femenino, su fecha de nacimiento y lugar de registro
+	
+	//Declaramos las variables a utilizar
+	definir curp, mesnac, dianac, genero, entidad Como Caracter
+	definir añonac como entero
+	Repetir
+		repetir 
+			repetir
+				//Iniciamos un bucle hasta que la curp tenga los 18 caracteres
+				Repetir
+					escribir MAYUSCULAS("Ingrese su curp, recuerde que está compuesta de 18 caracteres")
+					leer curp
+				Hasta Que Longitud(curp) = 18
+				//Colocamos las subcadenas de los datos que utilizaremos
+				dianac=Subcadena(curp,9,10)
+				mesnac=Subcadena(curp,7,8)
+				añonac=ConvertirANumero(subcadena(curp,5,6))
+				genero=subcadena(curp,11,11)
+				entidad=Subcadena(curp,12,13)
+				//Se coloca un s/n para saber si es hombre o mujer
+				si genero="H" o genero="h" Entonces
+					genero="Masculino"
+				SiNo
+					si genero="M" o genero="m" Entonces
+						genero="Femenino"
+					sino
+						escribir "La curp está mal escrita"
+						genero="x"
+					FinSi
+				FinSi
+			Hasta Que genero="Femenino" o genero="Masculino"
+			//Se utiliza el segun para identificar el estado de procedencia
+			Segun entidad Hacer
+				"as" o "AS":
+					entidad="Aguascalientes"
+				"bc" o "BC":
+					entidad="Baja California"
+				"bs" o "BS":
+					entidad="Baja California Sur"
+				"cc" o "CC":
+					entidad="Campeche"
+				"cs" o "CS":
+					entidad="Chiapas"
+				"ch" o "CH":
+					entidad="Chihuahua"
+				"df" o "DF":
+					entidad="Ciudad de México"
+				"cl" o "CL":
+					entidad="Coahuila"
+				"cm" o "CM":
+					entidad="Colima"
+				"dg" o "DG":
+					entidad="Durango"
+				"gt" o "GT":
+					entidad="Guanajuato"
+				"gr" o"GR":
+					entidad="Guerrero"
+				"hg" o "HG":
+					entidad="Hidalgo"
+				"jc" o "JC":
+					entidad="Jalisco"
+				"mc" o "MC":
+					entidad="Mexico"
+				"mn" o "MN":
+					entidad="Michoacan"
+				"ms" o "MS":
+					entidad="Morelos"
+				"nt" o "NT":
+					entidad="Nayarit"
+				"nl" o "NL":
+					entidad="Nuevo León"
+				"oc" o "OC":
+					entidad="Oaxaca"
+				"pl" o "PL":
+					entidad="Puebla"
+				"qo" o "QO":
+					entidad="Querétaro"
+				"qr" o "QR":
+					entidad="Quintana Roo"
+				"sp" o "SP":
+					entidad="San Luis Potosí"
+				"sl" o "SL":
+					entidad="Sinaloa"
+				"sr" o "SR":
+					entidad="Sonora"
+				"tc" o "TC":
+					entidad="Tabasco"
+				"ts" o "TS":
+					entidad="Tamaulipas"
+				"tl" o "TL":
+					entidad="Tlaxcala"
+				"vz" o "VZ":
+					entidad="Veracruz"
+				"yn" o "YN":
+					entidad="Yucatán"
+				"zs" o "ZS":
+					entidad="Zacatecas"				
+				De Otro Modo:
+					escribir "La curp está mal escrita"
+					entidad="X"
+			Fin Segun 
+		hasta que entidad="Aguascalientes" o entidad="Baja California" o entidad="Baja California Sur" o entidad="Campeche" o entidad="Chiapas" o entidad="Chihuahua" o entidad="Ciudad de México" o entidad="Coahuila" o entidad="Colima" o entidad="Durango" o entidad="Guanajuato" o entidad="Guerrero" o entidad="Hidalgo" o entidad="Jalisco" o entidad="Mexico" o entidad="Michoacan" o entidad="Morelos" o entidad="Nayarit" o entidad="Nuevo León" o entidad="Oaxaca" o entidad="Puebla" o entidad="Querétaro" o entidad="Quintana Roo" o entidad="San Luis Potosí" o entidad="Sinaloa" o entidad="Sonora" o entidad="Tabasco" o entidad="Tamaulipas" o entidad="Tlaxcala" o entidad="Veracruz" o entidad="Yucatán" o entidad="Zacatecas"
+		//Se evalua cual es el mes de nacimeinto para colocarlo en letras
+		Segun mesnac Hacer
+			"01":
+				mesnac="Enero"
+			"02":
+				mesnac="Febrero"
+			"03":
+				mesnac="Marzo"
+			"04":
+				mesnac="Abril"
+			"05":
+				mesnac="Mayo"
+			"06":
+				mesnac="Junio"
+			"07":
+				mesnac="Julio"
+			"08":
+				mesnac="Agosto"
+			"09":
+				mesnac="Septiembre"
+			"10":
+				mesnac="Octubre"
+			"11":
+				mesnac="Noviembre"
+			"12":
+				mesnac="Diciembre"
+			De Otro Modo:
+				escribir "La curp está mal escrita"
+				mesnac="x"
+	Fin Segun
+	Hasta Que mesnac="Enero" o mesnac="Febrero" o mesnac="Marzo" o mesnac="Abril" o mesnac="Mayo" o mesnac="Junio" o mesnac="Julio" o mesnac="Agosto" o mesnac="Septiembre" o mesnac="Octubre" o mesnac="Noviembre" o mesnac="Diciembre"
+	//Se hace un s/n para determinar el año de nac
+	si añonac >= 01 y añonac <=  21 Entonces
+		añonac=añonac+2000
+	SiNo
+		si añonac>21 y añonac<=99 Entonces
+			añonac=añonac+1900
+		FinSi
+	FinSi
+	escribir "Los datos de la persona con la curp " mayusculas(curp) " son los siguientes:"
+	escribir "Género:" Mayusculas(genero)
+	escribir "Fecha de nacimiento: " dianac " de " mesnac " de " añonac
+	escribir "Con lugar de Registro el estado de: " entidad
+	
+FinAlgoritmo

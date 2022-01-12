@@ -1,0 +1,44 @@
+Algoritmo AHORRO_MENSUAL_COLAB_CORREGIDO
+	//Pagina 108-110_Libro_Pinales
+	//Ejemplo 4.6
+	//Se requiere un algoritmo para determinar cuánto ahorrará una persona
+	//en un año, si al final de cada mes deposita variables cantidades de dinero; además,
+	//se requiere saber cuánto lleva ahorrado cada mes. Realice el diagrama de flujo,
+	//el pseudocódigo y el diagrama N/S para representarlo, utilizando un ciclo apropiado.
+	
+	Definir AhorroMensual Como Real      // AhorroMensual -> acomulador
+	Definir Cantidad, Mes Como Entero   // Mes = Contador del mes 
+	Definir M Como Caracter
+	
+	AhorroMensual <- 0
+	Mes = 0;
+	Escribir "******************************************************";
+	Escribir "               MI AHORRO PERSONAL";
+	Escribir "******************************************************";
+	Escribir "Ahorro personal 2021";
+	Para mes<-1   Hasta 12 Con Paso 1 Hacer
+		Escribir "Ingrese la cantidad que va a ahorra para el mes [ ", Mes," ] "; SinSaltar
+		Segun Mes
+			1: Escribir SinSaltar "Enero";
+			2: Escribir  SinSaltar "Febrero";
+			3: Escribir SinSaltar "Marzo";
+			4: Escribir SinSaltar "Abril";
+			5: Escribir SinSaltar "Mayo";
+			6: Escribir SinSaltar "Junio";
+			7: Escribir SinSaltar "Julio";
+			8: Escribir SinSaltar "Agosto";
+			9: Escribir SinSaltar "Septiembre";
+			10: Escribir SinSaltar "Octubre";
+			11: Escribir SinSaltar "Noviembre";
+			12: Escribir SinSaltar "Diciembre";
+		FinSegun
+		Escribir SinSaltar " ===";
+		Leer Cantidad
+		AhorroMensual <- AhorroMensual + Cantidad
+		Escribir "Usted lleva ahorrado: $",AhorroMensual;
+	Fin Para
+	Escribir ""
+	Escribir "******************************************************";
+	Escribir "          SU AHORRO ANUAL ES = $",AhorroMensual;
+	Escribir "******************************************************";
+FinAlgoritmo

@@ -1,0 +1,54 @@
+Algoritmo ventas_del_año
+	//se requiere un algoritmo que nos muestrede todas 
+	//las ventas mensuales de un determinado año, cuales meses estuvieron
+	//por debajo del promedio de venta mensual
+	definir ventas, sumadventas, promedio como real
+	definir mes como entero
+	dimension ventas[12]
+	sumadventas<-0
+	promedio<-0
+	para mes<-1 hasta 12 Hacer
+		escribir "Ingrese la venta del mes  [" mes "] " SinSaltar
+		Segun mes
+			1: Escribir SinSaltar "Enero"
+			2: Escribir  SinSaltar "Febrero"
+			3: Escribir SinSaltar "Marzo"
+			4: Escribir SinSaltar "Abril"
+			5: Escribir SinSaltar "Mayo"
+			6: Escribir SinSaltar "Junio"
+			7: Escribir SinSaltar "Julio"
+			8: Escribir SinSaltar "Agosto"
+			9: Escribir SinSaltar "Septiembre"
+			10: Escribir SinSaltar "Octubre"
+			11: Escribir SinSaltar "Noviembre"
+			12: Escribir SinSaltar "Diciembre"
+		FinSegun
+		Escribir SinSaltar "---"
+		leer ventas[mes]
+		sumadventas<-sumadventas+ventas[mes]
+	FinPara
+	limpiarpantalla
+	promedio<-sumadventas/12
+	Escribir "El promedio de venta mensual del año es de " promedio
+	//Buscamos los meses que esten por debajo del promedio
+	escribir "Los meses por debajo del promedio son: "
+	para mes<-1 hasta 12 Hacer
+		si ventas[mes]<promedio Entonces
+			escribir sinsaltar "El mes [" mes "] "
+			Segun mes
+				1: Escribir  "Enero"
+				2: Escribir  "Febrero"
+				3: Escribir  "Marzo"
+				4: Escribir  "Abril"
+				5: Escribir  "Mayo"
+				6: Escribir  "Junio"
+				7: Escribir  "Julio"
+				8: Escribir  "Agosto"
+				9: Escribir  "Septiembre"
+				10: Escribir  "Octubre"
+				11: Escribir  "Noviembre"
+				12: Escribir  "Diciembre"
+			FinSegun
+		FinSi
+	FinPara
+FinAlgoritmo
